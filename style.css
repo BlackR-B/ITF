@@ -1,0 +1,19 @@
+div{
+    font-size: 45px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 500px
+}
+nav{
+    display: block;
+    width: 60px;
+    background-color: yellow;
+}
+footer{
+    background-color: yellow;
+    display: block;
+    margin-top: 80px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="profile" id="profile">
+        <div class="notify"><p>1</p></div>
+    </div>
+    <h1 id="user">Paratshatan Book</h1>
+    <label>Set username</label><input type="text" id="name"><button onclick="setName()">set</button><p></p>
+    <label>Set profile</label><input type="text" id="avartar"><button onclick="setImg()">set</button><p></p>
+    <label>name</label><input type="text" id="text"><button onclick="addParagraph()">set</button>
+    <label></label><button onclick="saveCSV()">Export</button>
+    <div class="container">
+
+    </div>
+
+    <script>
+        const username = document.getElementById("user");
+        const input = document.getElementById("name");
+        const avartar = document.getElementById("avartar");
+        const profile = document.getElementById("profile");
+        const newdiv = document.getElementsByClassName("container")[0];
+        const text = document.getElementById("text");
+
+        function setName(){
+            username.textContent = input.value + " Paratshatan Book";
+            input.value = "";
+        
+        }
+        function setImg(){
+            profile.style.backgroundImage = "url(" + avartar.value +")";
+            console.log(avartar.value);
+            avartar.value = "";
+        }
+        function addParagraph(){
+            const newpara = document.createElement("p");
+            newpara.textContent = text.value;
+            newdiv.appendChild(newpara);
+
+        }
+        function saveCSV() {
+            const csvContent = phonenumber.map(row => row.join(",")).join("\n"); // Convert array to CSV string
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", "data.csv");
+            link.style.visibility = "hidden";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+};
+        
+    </script>
+</body>
+</html>

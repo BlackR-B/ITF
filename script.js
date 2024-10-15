@@ -1,4 +1,4 @@
-const DEFAULT_AVATAR_URL = 'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png';
+const DEFAULT_AVATAR_URL = 'https://i.pinimg.com/originals/cc/ca/76/ccca76309e0da6eb5f253e8fbcbdc534.jpg';
 
 let contacts = [];
 

@@ -57,5 +57,5 @@ function setDefaultAvatar() {
 window.onload = setDefaultAvatar;
 
 document.getElementById('username').addEventListener('click', function() {
-    window.location.href = 'https://github.com/Makufff';
+    window.location.href = 'https://github.com/BlackR-B';
 });
